@@ -11,9 +11,7 @@ const app = express();
 
 // Set CORS for frontend URL / allow single-node deploy
 app.use(cors({
-  origin: [
-    "https://shoping-website-i9nh.vercel.app"
-  ],
+  origin: process.env.FRONTEND_URL,
   credentials: true
 }));
 
